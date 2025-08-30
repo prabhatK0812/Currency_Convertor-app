@@ -1,0 +1,182 @@
+/* Sets the font of the whole page, input fields, dropdowns, and buttons to Roboto (fallback = sans-serif). */
+body, input, select, button {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: var(--bg);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+
+/* Light Mode Colors */
+:root {
+  --bg: linear-gradient(135deg, #667eea, #764ba2);
+  --card-bg: #fff;
+  --text: #222;
+  --input-bg: #f9f9f9;
+  --border: #ccc;
+  --btn-bg: #667eea;
+  --btn-hover: #5a67d8;
+}
+
+/* Dark Mode Colors */
+body.dark {
+  --bg: linear-gradient(135deg, #141e30, #243b55);
+  --card-bg: #1e1e2e;
+  --text: #eee;
+  --input-bg: #2a2a3b;
+  --border: #555;
+  --btn-bg: #4f46e5;
+  --btn-hover: #3730a3;
+}
+
+.app {
+  background: var(--card-bg);
+  width: 95%;
+  max-width: 420px;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.theme-btn {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.converter-box {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input-group,
+.currency-group {
+  text-align: left;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: 0.2s;
+  background: var(--input-bg);
+  color: var(--text);
+}
+
+input:focus {
+  border-color: var(--btn-bg);
+}
+
+.select-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  padding: 6px 10px;
+  background: var(--input-bg);
+}
+
+select {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+  color: var(--text);
+}
+
+img {
+  width: 32px;
+  height: 22px;
+  border-radius: 4px;
+}
+
+.btn {
+  padding: 12px;
+  background: var(--btn-bg);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--btn-hover);
+}
+
+.result {
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text);
+}
+
+
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;  /* Yeh sab ke beech spacing dega */
+}
+
+.dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+form button {
+  margin-top: 20px; /* Button aur dropdown ke beech extra gap */
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
